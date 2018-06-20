@@ -1,0 +1,1495 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>球学1+1——“国安班”的体教结合探索</title>
+	<link rel="stylesheet" href="css/aos.css" type="text/css">
+	<link rel="stylesheet" href="css/skippr.css">
+	<link href="css/video-js.min.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	
+	<script src="js/echarts.min.js"></script>
+	<script src="js/china.js"></script>
+
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin:0 auto;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+
+		}
+
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 45px;
+			z-index: 999;
+			background-color: #FFF;
+			box-shadow: 0 0 20px #aaaaaa;
+			display: none;
+		}
+
+		#logo {
+			float: left;
+			margin-top: -15px;
+		}
+
+		.nav {
+			width: 90%;
+			margin: 0 auto;
+			height: 38px;
+
+			background-repeat: no-repeat;
+			font-size: 16px;
+		}
+
+		.nav ul {
+			list-style-type: none;
+			padding-left: 90px;
+		}
+
+		.nav li {
+			float: left;
+		}
+
+		.nav li a:link,
+		.nav a:visited {
+			color: #000;
+			display: block;
+			text-align: center;
+			padding: 0px 30px;
+			text-decoration: none;
+
+		}
+
+		.nav li a:hover {
+			background-color: rgba(29, 106, 84, 0.603);
+			color: #FFF;
+			border-radius: 10px;
+			text-decoration: none;
+		}
+
+
+
+
+
+		#top {
+			height: 100%;
+			background-image: url(images/top.png);
+			background-size: cover;
+			background-position: center center;
+			
+		}
+
+		#daoyu {
+			width: 900px;
+			font-family: "微软雅黑", "黑体", "宋体";
+			margin: 0 auto;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			line-height: 2;
+
+		}
+
+		.first {
+			float: left;
+			font-size: 2em;
+			margin-right: 10px;
+			color: rgb(29, 106, 84);
+
+		}
+
+		.chapter {
+			width: 900px;
+			margin: 0 auto;
+			padding-top: 20px;
+
+		}
+
+		h2 {
+			font-family: "微软雅黑", "黑体", "宋体";
+			font-size: 30px;
+			color: rgb(29, 106, 84);
+			letter-spacing: 0.5em;
+			text-indent: 0.5em;
+			font-weight: lighter;
+		}
+
+		.fancy-header {
+			width: 100%;
+			margin: 30px 0 20px;
+			position: relative;
+			clear: both;
+			display: block;
+			z-index: 1;
+			text-align: center;
+		}
+
+		.fancy-header:after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 0;
+			border-bottom: 1px solid #e8e8e8;
+			left: 0;
+			top: 50%;
+			z-index: -1;
+		}
+
+		.fancy-header span {
+			font-size: 11px;
+			padding: 5px 10px;
+			background: #ffffff;
+			border-radius: 2px;
+			position: relative;
+			display: inline-block;
+			font-family: 'HelveticaNeue Light', Helvetica, Arial, sans-serif;
+			border: 1px solid #e8e8e8;
+		}
+
+		.fancy-header2 {
+			margin-bottom: 30px;
+			text-align: center;
+			font-family: "微软雅黑";
+			padding-top: 2px;
+		}
+
+		.fengge {
+			color: grey;
+			padding-bottom: 10px;
+
+		}
+
+		.row {
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
+
+		.row:before,
+		.row:after {
+			content: '\0020';
+			display: block;
+			overflow: hidden;
+			visibility: hidden;
+			width: 0;
+			height: 0;
+		}
+
+		.one_half {
+			position: relative;
+			width: 400px;
+			margin-bottom: 30px;
+			padding-left: 40px;
+			float: left;
+
+			overflow: hidden;
+			box-sizing: border-box;
+		}
+
+		.one_half2 {
+			position: relative;
+			width: 460px;
+			margin-bottom: 30px;
+			padding-left: 20px;
+			float: left;
+
+			overflow: hidden;
+			box-sizing: border-box;
+
+
+		}
+
+		.last {
+			margin-right: 0;
+			text-align: center;
+			padding-left: 70px;
+		}
+
+		.last2 {
+			margin-right: 0;
+			text-align: center;
+			padding-top: 10px;
+			padding-left: 70px;
+		}
+
+		.last3 {
+			margin-right: 0;
+			padding-left: 70px;
+			padding-top: 20px;
+		}
+
+		.last4 {
+			padding-top: 30px;
+			padding-left: 70px;
+		}
+
+		blockquote {
+			margin: 0 0 20px 0;
+			padding: 0;
+		}
+
+		blockquote p {
+			margin: 0 !important;
+			padding: 7px 0 5px 25px;
+			border-left: 4px solid rgb(29, 106, 84);
+			color: grey;
+			line-height: 2;
+
+		}
+
+		#chang {
+			margin: 0 !important;
+			padding: 7px 0 5px 25px;
+			border-left: 4px solid rgb(29, 106, 84);
+			color: grey;
+			line-height: 2;
+			height: 170px;
+		}
+
+		.fenlan {
+			width: 900px;
+			margin: 0 auto;
+			padding-top: 15px;
+		}
+
+		.yingyulaoshi {
+			padding-top: 10px;
+			margin-bottom: 0px;
+		}
+
+		#yingyulaoshi {
+			padding-left: 20px;
+			box-sizing: border-box;
+			margin-top: 15px;
+		}
+
+		.zhaibiao {
+			width: 900px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		#meixi {
+			margin-top: -30px;
+			text-align: center;
+		}
+
+		.video-js {
+			font-size: 10px;
+			color: #fff;
+		}
+
+
+		.vjs-default-skin .vjs-big-play-button {
+			font-size: 3em;
+			line-height: 2em;
+			height: 2em;
+			width: 2em;
+			border: 0.06666em solid #fff;
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			margin-left: -1em;
+			margin-top: -1em;
+		}
+
+		.video-js .vjs-control-bar,
+		.video-js .vjs-big-play-button,
+		.video-js .vjs-menu-button .vjs-menu-content {
+			background-color: #2B333F;
+			background-color: rgba(43, 51, 63, 0.7);
+		}
+
+		.video-js .vjs-slider {
+			background-color: #73859f;
+			background-color: rgba(115, 133, 159, 0.5);
+		}
+
+		.video-js .vjs-volume-level,
+		.video-js .vjs-play-progress,
+		.video-js .vjs-slider-bar {
+			background: #fff;
+		}
+
+		.video-js .vjs-load-progress {
+			background: #bfc7d3;
+			background: rgba(115, 133, 159, 0.5);
+		}
+
+		.video-js .vjs-load-progress div {
+			background: white;
+			background: rgba(115, 133, 159, 0.75);
+		}
+
+		#fanshu {
+			float: left;
+
+			overflow: hidden;
+
+			margin-top: 20px;
+		}
+
+
+		#zhuanbi {
+			float: right;
+
+			overflow: hidden;
+
+			margin-top: 20px;
+		}
+
+		.zhujiaolian {
+			float: left;
+			text-align: center;
+			padding-left: 30px;
+			border-left: rgba(29, 106, 84, 0.8) solid 3px;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+
+		.shipinzi {
+			float: right;
+			color: grey;
+			width: 400px;
+			padding-top: 30px;
+		}
+
+		.shipinzi2 {
+			float: left;
+			width: 470px;
+			color: grey;
+			padding-left: 70px;
+			border-left: #999 solid 3px;
+			margin-left: 5px;
+		}
+
+		.suzhengshu {
+			width: 900px;
+			margin: 0 auto;
+		}
+
+		.suzheng {
+			float: right;
+			margin-right: 90px;
+			padding-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.jinqiu {
+			width: 900px;
+			margin-top: 40px;
+			margin-bottom: 30px;
+		}
+
+		#section1-top,
+		#section2-top,
+		#section3-top,
+		#section4-top {
+			position: relative;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		#section1-top {
+			background-image: url(images/ball.png);
+		}
+
+		#section2-top {
+			background-image: url(images/school.png);
+		}
+
+		#section3-top {
+			background-image: url(images/yi.jpg);
+		}
+
+		#section4-top {
+			background-image: url(images/waiguoqingxun.jpg);
+		}
+
+		.caption {
+			width: 40%;
+			padding-bottom: 30px;
+			position: absolute;
+			left: 30%;
+			top: 30%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			transform: translateY(20px);
+			-webkit-transform: translateY(20px);
+			transition: all 0.75s linear;
+			-webkit-transition: all 0.75s linear;
+		}
+
+		.caption-ani {
+			opacity: 1;
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+		}
+
+		.part {
+
+			padding-bottom: 5px;
+		}
+
+
+		.section {
+			width: 900px;
+			margin: 0 auto;
+			line-height: 2;
+			background-color: #FFF;
+			overflow: hidden;
+		}
+
+		.one_half last img {
+			border-radius: 30%;
+		}
+
+		.one_half last {
+			text-align: center;
+		}
+
+		.extra {
+			margin-left: 20px;
+			float: right;
+		}
+
+
+		.clearfix:after {
+			content: ".";
+			display: block;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+		}
+
+
+		.text {
+			width: 470px;
+			float: left;
+			margin-right: 50px;
+		}
+
+		.biaozhu {
+			color: grey;
+			font-weight: normal;
+			font-size: 14px;
+			display: block;
+			padding-top: 10px;
+
+		}
+
+		.youduiqi {
+			text-align: right;
+		}
+
+		.pic {
+			width: 380px;
+			float: right;
+			border-bottom: solid #999 1px;
+			margin-bottom: 5px;
+		}
+
+		#pic2 {
+			padding-top: 25px
+		}
+
+		.slider-wrapper {
+			width: 380px;
+			height: 220px;
+
+		}
+
+		.slider-wrapper2 {
+			width: 380px;
+			height: 255px;
+			margin-top: 25px;
+		}
+
+		user agent stylesheet div {
+			display: block;
+		}
+
+		.zu {
+			width: 900px;
+			height: 192px;
+			margin-bottom: 40px;
+		}
+
+		.yizhaopian {
+			float: left;
+			padding-left: 10px;
+			padding-right: 20px;
+			padding-top: 15px;
+			height: 192px;
+			box-sizing: border-box;
+
+
+		}
+
+		.yiwenzi {
+			float: right;
+			width: 700px;
+			padding-left: 30px;
+		}
+
+		.jiacu {
+			color: rgb(29, 106, 84);
+			font-weight: bold;
+		}
+
+		.renming {
+			color: grey;
+			font-weight: bold;
+
+		}
+
+		.q {
+			font-size: 22px;
+			color: rgb(29, 106, 84);
+			letter-spacing: 0.5em;
+			margin-left: 20px;
+			margin-top: 70px;
+			margin-bottom: 50px;
+		}
+
+		.zuo {
+			float: left;
+		}
+
+		.you {
+			float: right;
+		}
+
+		.A {
+			margin-top: 30px;
+		}
+
+		.ec {
+			margin: 0 auto;
+		}
+
+		.line-left {
+			height: 1px;
+			background: #fff;
+			position: absolute;
+			bottom: 20px;
+			-webkit-animation: dude-left .75s 1 forwards;
+			animation: dude-left 1s 1 forwards;
+		}
+
+		@-webkit-keyframes dude-left {
+			0% {
+				width: 0;
+				left: 0%;
+			}
+			100% {
+				width: 60%;
+				left: 35%;
+			}
+		}
+
+		.line-left-out {
+			height: 1px;
+			background: #fff;
+			position: absolute;
+			bottom: 20px;
+			-webkit-animation: dude-left-out .75s 1 forwards;
+			animation: dude-left-out 1s 1 forwards;
+		}
+
+		@-webkit-keyframes dude-left-out {
+			100% {
+				width: 0;
+				left: 0%;
+			}
+			0% {
+				width: 60%;
+				left: 35%;
+			}
+		}
+
+		.line-right {
+			height: 1px;
+			background: #fff;
+			position: absolute;
+			bottom: 16px;
+			right: 0%;
+			-webkit-animation: dude-right .75s 1 forwards;
+			animation: dude-right 1s 1 forwards;
+		}
+
+		@-webkit-keyframes dude-right {
+			0% {
+				width: 0;
+				right: 0%;
+			}
+			100% {
+				width: 60%;
+				right: 35%;
+			}
+		}
+
+		.line-right-out {
+			height: 1px;
+			background: #fff;
+			position: absolute;
+			bottom: 16px;
+			-webkit-animation: dude-right-out .75s 1 forwards;
+			animation: dude-right-out 1s 1 forwards;
+		}
+
+		@-webkit-keyframes dude-right-out {
+			100% {
+				width: 0;
+				right: 0%;
+			}
+			0% {
+				width: 60%;
+				right: 35%;
+			}
+		}
+
+		.block {
+			background: #DDD;
+			margin-top: 10px;
+			padding: 8px;
+		}
+
+		.block-desc {
+			font-size: 12px;
+		}
+
+		#sanlie {
+			margin: 0 auto;
+			width: 700px;
+			margin-bottom: -30px;
+			margin-top: -20px;
+			overflow: hidden;
+		}
+
+		#jisui {
+			margin: 0, auto;
+		}
+
+		#bisai {
+			margin: 0, auto;
+		}
+
+		.wgleft {
+			float: left;
+			width: 670px;
+			margin-right: 30px;
+		}
+
+		.wgright {
+			float: right;
+			width: 200px;
+			margin-top: 25px;
+		}
+
+		#footer {
+			width: 100%;
+			height: 230px;
+			background-color: rgb(66, 96, 45);
+			padding-top: 3px;
+
+		}
+
+		#footer p {
+			font-size: 13px;
+			letter-spacing: 0.1em;
+			color: #FFF;
+			padding-top: 25px;
+			text-align: center;
+			line-height: 2.5em;
+		}
+
+		#footer a:link {
+			color: #fff;
+			text-decoration: none
+		}
+
+		#footer a:visited {
+			color: #fff;
+			text-decoration: none
+		}
+
+		#footer a:hover {
+			color: #fff;
+			text-decoration: underline;
+		}
+
+		#footer a:active {
+			color: #fff;
+			text-decoration: underline;
+		}
+		
+	</style>
+</head>
+
+<body>
+
+	<div id="header" class="header">
+		<div id="nav" class="nav clearfix">
+			<div id="logo">
+				<img src="images/logo.png" width="73px">
+			</div>
+			<ul>
+				<li>
+					<a href="#section1-top" class="smooth">球</a>
+				</li>
+				<li>
+					<a href="#section2-top" class="smooth">学</a>
+				</li>
+				<li>
+					<a href="#section3-top" class="smooth">议</a>
+				</li>
+				<li>
+					<a href="#section4-top" class="smooth">鉴</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+
+	<div id="top" data-aos="fade-down">
+
+	</div>
+	<div id="daoyu">
+		<p>
+			<span class="first">2017年，</span>北京中赫国安足球俱乐部与牛栏山一中实验学校携手创建“中赫国安班”，收编俱乐部2002、2003年龄段梯队的队员，小球员们上午在学校学习初中文化知识，下午回到青训基地进行足球训练。</p>
+		<p>长久以来，我国职业运动员的培养容易走向成长的不平衡——精湛了青少年运动员运动技能的同时也带来了文化素质的缺失和与同龄人的隔绝。</p>
+		<p>如今，“体教结合”的呼声日益高涨，而“中赫国安班”的创立不失为一种探索：“国安班”的球员是否可以在踢球的同时不必放弃学业？职业与学业，这对传统意义上的鱼和熊掌，究竟能否兼得？</p>
+
+	</div>
+	<div id="section1-top">
+		<div class="caption">
+			<div class="part">
+				<img src="images/qiu.png" width="180px">
+			</div>
+			<div id="line-left"></div>
+			<div id="line-right"></div>
+		</div>
+	</div>
+
+	<div class="section A">
+		<p>五月末的北京，太阳用不知疲倦的炙烤宣示着炎夏的来临。下午三点，室外仍然酷热难耐，阳光把球场的草皮灼得发烫，也蒸腾出青草的阵阵沁香。16岁的苏铮和伙伴们鱼贯而入，围拢到教练身边，听取训练安排。</p>
+
+		<p>这是他来到“国安班”的第十个月；</p>
+		<p>这是他踢足球的第十年。</p>
+
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 1</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>启蒙</h2>
+		</div>
+	</div>
+
+	<div class="section">
+		<p>苏铮出生在一个球迷家庭，父亲是北京国安的铁杆粉丝，热爱足球的父亲也给了幼年苏铮最初的足球启蒙。</p>
+		<div data-aos="fade-up">
+			<img src="images/xx1.png">
+		</div>
+		<div data-aos="fade-up">
+			<img src="images/xx2.png">
+		</div>
+		<div data-aos="fade-up">
+			<img src="images/xx3.png">
+		</div>
+		<div data-aos="fade-up">
+			<img src="images/xx4.png">
+		</div>
+		<div data-aos="fade-up">
+			<img src="images/xx5.png">
+		</div>
+		<p>进入俱乐部是半职业化训练的开端。每天放学后，当其他同学或嬉闹玩耍或匆匆回家时，苏铮都要来到球场，和俱乐部里同年龄段的佼佼者一起训练两小时，这样的日子持续了两年。初二时，在比赛中屡屡送出优异表现的苏铮听从了教练的建议，决定走上职业化道路。</p>
+
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 2</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>相遇</h2>
+		</div>
+	</div>
+
+	<div class="section">
+		<p>2017年的7月25日，北京中赫国安U16梯队正式组建。U16主教练、前国脚翟飙介绍，U16梯队的球员来源广泛，既有像苏铮这样土生土长的北京孩子，也有来自全国各地的足球苗子：</p>
+		<div id="container" style="height: 600px;width:900px;background:white;margin:20px 0 0;" data-aos="fade-down"></div>
+		<p>来自五湖四海的队员一方面增加了球队的包容性，另一方面，球员们正值十五六岁的年纪，天性的好动与地域的差异让队员间难免产生摩擦，这也对球队管理提出了挑战。</p>
+		<p>“刚来北京时普通话说得不好，都讲自己的方言，互相听不懂，也老吵架。”谈到初来乍到时和队友闹出的不愉快，来自湖北的刘石开不好意思地挠了挠头。</p>
+		<div class="zhujiaolian">
+			<video width="420" class="video-js vjs-default-skin video-scrollplay" controls data-setup="{}">
+				<source src="video/zhujiaolian.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="shipinzi">
+			<p>如今队伍的融洽氛围得来不易，建队以来气氛的变化都要归功于主教练、被尊称为“翟指”的翟飙。
+				<br>谈到队伍人员构成的多元，翟指说：“用毛主席的话来讲，我们是从五湖四海走到一起来的。”</p>
+		</div>
+	</div>
+
+
+
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 3</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>征战</h2>
+		</div>
+	</div>
+
+	<div class="section">
+		<div id="sanlie">
+			<img src="images/sanlie.png" width="700px" height="403px">
+		</div>
+		<div class="suzhengshu clearfix">
+			<div class="shipinzi2">
+				<p>对于一支刚刚成立十个月的队伍而言，取得这样的战绩已属不易。即使是数月之后，苏铮依然能够清晰地忆起比赛的细节。谈起自己作为“关键先生”的表现，小伙子笑得很是灿烂，欣喜与自豪溢于言表：</p>
+				<p>“有两场关键比赛都是对阵长春亚泰。第一次是60多分钟时我替补上场，我进了球，1-0领先，后来1-1被对方扳平了，到了80多分钟时，我传中导致对方乌龙，最后2-1胜利。”</p>
+			</div>
+			<div class="suzheng" data-aos="fade-left">
+				<img src="images/suzhengshu.jpg" width="180">
+			</div>
+		</div>
+		<p>之后，2018全国青少年足协杯赛U16组，北京中赫国安U16再一次遭遇长春亚泰。对于中赫国安而言，这是一场输不起的比赛——一旦输球，中赫国安将失去本区的决赛资格，被降级至下半区。因此，中赫国安迫切地需要一场胜利来保住席位，如不能直取胜利而是被迫点球决胜负，极大的不确定性无疑会为前途蒙上一层阴影。
+			不知是否由于这是场决定命运的比赛而让队员们背负了过多压力，赛场上，两队都迟迟未能打开局面，眼看时间将尽，而双方门前依旧固若金汤。直到第87分钟，苏铮一脚破门送上绝杀，帮助中赫国安顺利留在了上半区。
+		</p>
+		<P>翟指还比较满意弟子们的表现，但也承认与强队仍存差距：“（在全国范围内比较），我们的队伍现在处在中游的位置，毕竟我们组队的时间稍晚一些。国内的其他球队，组队时间长的都已经有四五年了，而我们只有十个月，现在还在追赶。”</p>
+		<p>翟指对队员们的训练和生活各方面都十分严格：“比如要求你做到百分之百的冲刺，你来80%都是不可以的。在训练场上，就是要令行禁止。足球是什么？是和平年代的战争，下达命令就要执行。”
+		</P>
+		<div class="jinqiu">
+			<video width="900" class="video-js vjs-default-skin video-scrollplay" controls data-setup="{}">
+				<source src="video/jinqiu.mp4" type="video/mp4">
+			</video>
+		</div>
+
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 4</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>逐梦</h2>
+		</div>
+	</div>
+
+
+
+	<div class="section">
+
+		<p class="fengge">“我踢球的风格偏南美，非常喜欢内马尔。”——苏铮</p>
+		<p class="fengge">“受伤时很着急，怕（因此）踢不到职业俱乐部。”——刘石开</p>
+		<p class="fengge">“回家时间很少，也很想家。但是走职业（路线），必须克服。”——贾昕岳</p>
+
+		<p>“国安班”的每一名小球员都有一个球星梦，教练也期望着从这里能够走出未来的足球明星。然而逐梦之路注定道阻且长，等待他们的不仅是技术的磨砺、也有伤病的折磨与心理的考验。</p>
+
+
+		<div class="fenlan">
+			<div class="row">
+				<div class="one_half">
+					<blockquote>
+						<p id="chang">苏铮身披10号球衣——贝利、马拉多纳、普拉蒂尼、巴乔，这些伟大的名字让绿茵场上10号的意义变得与众不同——代表了整个球队的灵魂和核心。“刚开始踢前腰，后来因为跑得太快了就踢边锋了。”</p>
+					</blockquote>
+				</div>
+				<div class="one_half last" data-aos="zoom-in">
+					<img src="images/suzheng.jpg" width="330px">
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="one_half">
+					<blockquote>
+						<p>刘石开曾忍受伤病的折磨，长期训练让他的左膝半月板二级磨损。当时他正处在由业余转职业的关键期，一个月的恢复期显得格外漫长与灰暗：“没有专业的队医，怕伤好了踢不上球，在家也发脾气。”即使后来成功转入职业梯队，伤病的影响仍然如影随形。</p>
+					</blockquote>
+				</div>
+				<div class="one_half last2" data-aos="zoom-in">
+					<img src="images/liushikai.jpg" width="330px">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="one_half">
+					<blockquote>
+						<p>对于背井离乡、从沈阳来到北京踢球的贾昕岳而言，同龄人享受的家庭欢乐则成为了奢望。“大部分时间都在北京，如果俱乐部放假或者是需要回家办手续，才可以回家。”被问及是否想家时，爽朗的贾昕岳答道：“肯定会想。但是走职业（路线），必须克服。国安是个很大的平台，自己选择了，不能因为想家而放弃。”</p>
+					</blockquote>
+				</div>
+				<div class="one_half last3" data-aos="zoom-in">
+					<img src="images/jiaxinyue.jpg" width="330px">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div id="section2-top">
+		<div class="caption">
+			<div class="part">
+				<img src="images/xue.png" width="180px">
+			</div>
+			<div id="line-left"></div>
+			<div id="line-right"></div>
+		</div>
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 1</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>资源共享</h2>
+		</div>
+	</div>
+
+
+	<div class="section">
+		<p>走在牛栏山一中实验学校的校园里，绿色的国安队服与长年训练馈赠的黝黑肤色让国安班的学生显得格外突出。在这里，U16梯队的队员们被分入中赫国安1班和中赫国安2班两个班级，学习初三年级的语文、数学、英语、物理、政治、历史六门课程。</p>
+
+		<p>谈及国安与学校合作的原因，牛栏山一中实验学校德育处主任李海宝老师将其总结为“资源共享”：“国安需要我们的优质资源来为球员提供文化教育，学校也需要国安的优质资源来发展校园足球，双方因此一拍即合。”</p>
+
+
+		<div id="1-2" class="clearfix">
+			<div id="text1-2" class="text">
+				<p>学校足球队主教练韩泽山老师认为国安班的到来给校队带来了很大帮助：“尽管由于一些场地的限制，我们（校队和国安梯队）平时不能在一起训练，但是双方可以比赛。通过比赛，我们校队的队员也从国安的小队员身上学到了许多，技战术的配合、在球场上的意识以及在球场上的团结性都有所提升。”此外，在寒暑假期间，牛栏山一中实验学校校足球队的队员还可以前往中赫国安基地，与国安的青训梯队一同训练。
+				</p>
+			</div>
+
+
+			<div id="pic2" data-aos="fade-left" class="pic ">
+				<div class="slider-wrapper">
+					<div class="slider">
+						<div style="background-image: url(images/changguan1.jpg)"></div>
+						<div style="background-image: url(images/changguan2.jpg)"></div>
+						<div style="background-image: url(images/changguan3.jpg)"></div>
+						<div style="background-image: url(images/changguan4.jpg)"></div>
+					</div>
+				</div>
+				<div class="biaozhu">北京中赫国安足球俱乐部顺义训练基地</div>
+
+
+
+
+
+			</div>
+		</div>
+
+		<div id="1-3" class="clearfix">
+			<div id="text1-2" class="text">
+				<p>从中获益的不仅是校队，“国安班”的到来也让这所本就以校园足球而闻名的学校有了更加浓厚足球氛围。同学们参与班级联赛、校级联赛的积极性更高了，李海宝老师也提到，学校计划在下一年的校园足球联赛中将“国安班”学生打散编入普通班级，让普通学生真正获得与高水平球员交流技艺的机会。</p>
+				<p>而到名校读书、过与同龄人一样的校园生活，也是中赫国安梯队的小球员此前未曾想象过的。刘石开之前在体校就读，普通中学生井井有条的作息规律与牛一实验优美的校园环境都让他感到兴奋：“作息比在体校时更有规律，校园环境也好了太多。”
+				</p>
+			</div>
+
+
+			<div class="pic" data-aos="fade-left">
+				<div class="slider-wrapper2">
+					<div class="slider">
+						<div style="background-image: url(images/xuexiao1.png)"></div>
+						<div style="background-image: url(images/xuexiao2.jpg)"></div>
+						<div style="background-image: url(images/xuexiao3.jpg)"></div>
+						<div style="background-image: url(images/xuexiao4.jpg)"></div>
+					</div>
+				</div>
+				<div class="biaozhu">牛栏山一中</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 2</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>喜忧参半</h2>
+		</div>
+	</div>
+
+
+
+	<div class="section">
+		<p>如果说“体教结合，全面育人”是美好的理想，那么学生程度参差不齐、学习欲望难如人意便是“国安班”略显尴尬的现实。</p>
+		<p>“和普通班级的学生相比，‘国安班’的学生沟通能力更强，性格也比较好，”负责“国安班”数学教学的赵贺锋老师说道，“但是学生的接受能力、学习欲望的确差异很大。”
+		</p>
+		<p>
+			<div class="jinqiu">
+				<video width="900" class="video-js vjs-default-skin video-scrollplay" controls data-setup="{}">
+					<source src="video/shuxueke.mp4" type="video/mp4">
+				</video>
+			</div>
+		</p>
+		<p>中赫国安U16梯队的队员年龄不一，进队前的学习水平也并不一致，同在一个班级的学生，有的已经完成了初中课程的学习，有的文化程度还停留在初一水平，这也给老师的授课带来了很大难度。</p>
+		<p> “一节课，如果能让所有的学生都听明白了，这节课的课程设置上面会困难特别大，”赵老师坦言，学生的整体水平让他无法按照原先计划讲授初三内容，“后来我调整了计划，从初一的内容，甚至从六年级的内容拉出来一部分开始讲，慢慢地加大难度，这样，跟着老师走的学生也越来越多。”</p>
+		<p>与数学老师降低难度、循序渐进的方法不同，英语老师林荣吸引学生兴趣的方法是把课程内容与足球结合起来，最大程度地贴近“国安班”的日常生活和运用需要。</p>
+
+
+
+		<div class="row yingyulaoshi">
+			<div class="one_half">
+				<blockquote>
+					<p>“我们为‘国安班’专门研发开设了一门英语听说课，讲授和足球相关的英语。”林荣老师说，“有一次我在课上放了一个足球视频，孩子们看了马上就指出‘老师，你这个视频不对，现在足球不这样踢’，所以我和他们也是互相学习、教学相长。”</p>
+					<p class="youduiqi">——林荣 | 牛栏山一中英语老师</p>
+				</blockquote>
+			</div>
+			<div class="one_half last" id="yingyulaoshi" data-aos="fade-left" aos-duration: "7000">
+				<img src="images/yingyulaoshi.png" width="350px">
+			</div>
+		</div>
+
+		<p>比起教学内容上的调整，更难的是让学生转变观念。一些学生之前长期忽视文化课导致基础不牢而丧失了学习的热情，还有一些学生笃定了日后要从事足球而认为“学习无用”，面对这样的情况，老师们也用尽了心思，希望把孩子们带回课堂。经过近一年的努力，老师们的工作初见成效，有越来越多的学生能够“坐得住、听得进”，渐渐懂得了学习的意义。</p>
+		<p>苏铮认为文化教育肯定能让他们变得更充实：“语文的学习，英语的学习，不管是在国内国外，还是场上场下，都能让我们沟通得更好。数学能开阔我们的思维。足球除了是用脚踢，其实实际上是在用脑子踢。”</p>
+
+		<div id="fanshu">
+			<video width="410" class="video-js vjs-default-skin video-scrollplay" controls muted loop data-setup="{}">
+				<source src="video/fanshu.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div id="zhuanbi">
+			<video width="410" class="video-js vjs-default-skin video-scrollplay" controls muted loop data-setup="{}">
+				<source src="video/zhuanbi.mp4" type="video/mp4">
+			</video>
+		</div>
+
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 3</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>“梅西和他的小伙伴”</h2>
+		</div>
+	</div>
+
+	<div class="section">
+		<p>“足球是和平年代的战争。”翟指一语道破了足球的残酷。这种残酷不仅体现在足球场上的激烈拼抢中，更体现在职业球员极高的淘汰率上。同其他竞技项目一样，足球球员的层层选拔也遵循“金字塔”规律，队员们即使已经进入了职业梯队、成为了同龄人中的佼佼者，最终能成为职业球员的选手仍是凤毛麟角。</p>
+		<p>目前，中赫国安俱乐部计划在一至两年后为U16梯队开设低级别的教练员培训班与医疗保障学习班，为最终未能走上球员道路的队员提供更多的职业选择。</p>
+		<p>几天前，翟指导和队员们共同观看了一部影片，讲述的是梅西和他的小伙伴的故事。在电影中有这样的一幕，令翟指导印象颇深：</p>
+		<div id="meixi" data-aos="flip-up" data-aos-duration="8000">
+			<img src="images/meixi.png" width="800px">
+		</div>
+	</div>
+
+	<div class="row zhaibiao">
+		<div class="one_half2">
+			<blockquote>
+				<p>“我也想告诉怀揣球星梦、职业球员梦的孩子们，每个人的生活是不一样的，可能你成为球星、成为职业球员的几率不多，但是你的生活还得继续，即使是成为了职业球员，足球生涯也毕竟短暂，运动员终有一天要退役、面对这个社会。所以一方面我们要为梦想努力、青春无悔，另一方面，我们也要学更多的知识，为将来做好准备。”</p>
+				<p class="youduiqi">——翟飙 | 北京中赫国安U16梯队主教练</p>
+			</blockquote>
+		</div>
+		<div class="one_half last4">
+			<img src="images/zhaibiao.jpg" width="330" data-aos="zoom-in"data-aos-duration="8000">
+		</div>
+	</div>
+
+
+
+	<div id="section3-top">
+		<div class="caption">
+			<div class="part">
+				<img src="images/yi.png" width="180px">
+			</div>
+			<div id="line-left"></div>
+			<div id="line-right"></div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="q">
+			<p>Q：如何评价中赫国安班“体教结合”？</p>
+		</div>
+
+		<div class="zu">
+			<div class="yizhaopian">
+				<img src="images/hantao.png" width="140px">
+			</div>
+			<div class="yiwenzi">
+				<p>
+					<span class="renming">韩涛&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;北京中赫国安俱乐部青少部体系发展经理</span>
+					<br> 我们希望是
+					<span class="jiacu">两条腿走路</span>，在保证球员的训练质量、比赛的场次以外，对文化课着重加强。比如说考试没有达标，梯队的教育辅导员拥有一票否决权，不经过主教练的同意，就直接让孩子停训，把文化课的所缺的东西补回来。通过这些方方面面能够让孩子认识到，除了作为一个在国安踢球的运动员以外，同时也不要忘了他另外一个身份还是个学生。</p>
+			</div>
+		</div>
+
+
+		<div class="zu">
+			<div class="yizhaopian">
+				<img src="images/lichanming.png" width="140px">
+			</div>
+			<div class="yiwenzi">
+				<p>
+					<span class="renming">李晨明&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;中央电视台体育频道主持人、解说员</span>
+					<br> 俱乐部和学校的合作能够吸引更多球员加入职业训练的同时兼顾学业，对于俱乐部来讲的话，当然需要吸纳越来越多的后备人才的储备，把基数越大，在今后选拔出兼优秀人才的这种可能性才越高。青训其实
+					<span class="jiacu">做的是教育，而不只是做体育</span>，实际上是教育行业告诉孩子们应该怎样通过足球这一项游戏从中体会到快乐。</p>
+			</div>
+		</div>
+
+
+		<div class="zu">
+			<div class="yizhaopian">
+				<img src="images/wangjun.png" width="140px">
+			</div>
+			<div class="yiwenzi">
+				<p>
+					<span class="renming">王军&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;《体坛周报》资深记者、体育产业研究专家</span>
+					<br> 肯定有一定的积极影响，但这种影响是比较有限的。在重点中学上课，不代表拥有重点中学学习能力，学习能力和学习场所是两个概念。“体教结合”本身是一个伪命题，难道踢球的人就不应该学习？
+					<span class="jiacu">育人永远是第一位的</span>，踢球才是第二位的，这样才能够真正提高中国足球的素质和水平。也才有望解决中国足球当下的很多问题，利己主义、拜金主义等等。</p>
+			</div>
+		</div>
+
+
+		<div class="zu">
+			<div class="yizhaopian">
+				<img src="images/liyuhang.png" width="140px">
+			</div>
+			<div class="yiwenzi">
+				<p>
+					<span class="renming">李宇航&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;前牛栏山一中校队队长、首都体育学院体育教育专业足球专项大二在读</span>
+					<br> 学校为俱乐部的小球员提供接受良好教育的环境，俱乐部为学校提供高水平的小球员来帮助学校在各种比赛中取得好成绩。虽然是一个双方互利共赢的事情，但对校园足球的推动作用我认为不太大。对于学校来说更多是培养相应的足球特长生，
+					<span class="jiacu">提升这部分特长生的能力</span>。但是对于普通学生来讲可能帮助甚微。</p>
+			</div>
+		</div>
+
+		<div class="q">
+			<p>中国足球青训展望</p>
+		</div>
+
+		<div class="zuo" data-aos="fade-right">
+			<img src="images/lichenming2.png" width="700px">
+		</div>
+		<div class="you" data-aos="fade-left">
+			<img src="images/wangjun2.png" width="700px">
+		</div>
+		<div class="zuo" data-aos="fade-right">
+			<img src="images/wangdongni2.png" width="700px">
+		</div>
+		<div class="you" data-aos="fade-left">
+			<img src="images/mayiteng2.png" width="700px">
+		</div>
+	</div>
+
+	<div id="section4-top">
+		<div class="caption">
+			<div class="part">
+				<img src="images/jian.png" width="180px">
+			</div>
+			<div id="line-left"></div>
+			<div id="line-right"></div>
+		</div>
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 1</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>日本青训</h2>
+		</div>
+	</div>
+
+	<div class="section">
+		<p>中日青训几乎同一时间起步，到如今成果却天差地别。近年来，中国俱乐部、学校青训队大比分输给外国青年队的新闻层出不穷。人们在感叹足球水平的差距时，也在思考：中国青训的问题出在哪里？带着这个问题，河北华夏幸福俱乐部调查了队内青训球员和日本川崎前锋队的青训队员，得到了这样的结果。</p>
+		<div id="jisui" data-aos="fade-up">
+			<img src="images/jisui.png">
+		</div>
+		<div id="bisai" data-aos="fade-up">
+			<img src="images/bisai.png">
+		</div>
+		<div class="biaozhu" witdh="900px" style="text-align: center">数据来源：河北华夏幸福足球俱乐部</div>
+		<p>当问及“你为什么踢足球”时，中国小球员的回答大多是“喜欢运动，喜欢足球”，而日本小球员的答案是“受父亲、哥哥的影响”。这在一定程度上说明日本的足球氛围更浓，更能激励孩子投身到足球运动中。</p>
+		<div class="clearfix">
+			<div class="wgleft">
+				<p>而日本足球人口数量的优势，很大程度上要归功于日本高中足球联赛。日本高中足球联赛全称为“日本高等学校足球选手权大会”，在联赛中表现好的高中球员，可以获得职业队的橄榄枝。早年的川口能活、中村俊辅、中田英寿，近年的本田圭佑、浅野拓磨等等，都是从高中联赛走出去的球星。</p>
+				<p>只不过，这些人并非真的仅依靠天赋就能获得职业俱乐部的垂青，他们往往从小就一边完成学业一边接受专业青训，而从青训队淘汰下来之后，球员一般都会入读高中。</p>
+				<p>中国也有自己的“高中足球联赛”。效仿日本从各县挑选出48支球队，中国高中足球联赛将全国分为四个大区，每区16队，共64队。相比之下，日本参赛的48支球队，是在本县内经过淘汰赛重重选拔脱颖而出的，实际参加预选赛的超过2000支球队。而中国高中足球联赛的报名规程写道：“如果参赛队数不足16支，承办赛区单位（或省市）可优先递补一支球队。如还不足，则依据上届联赛分区赛名次靠前球队所在省市依次递补。”然而在2016年，东南区仍只有12只球队参赛，联赛面临着尴尬的境地。“中国高中足球联赛”的官方微博，也仅有453人关注，相比日高联赛动辄四万的上座率，足球人口的差距也由此体现出来。</p>
+			</div>
+			<div class="wgright">
+				<img src="images/btgy.jpg" width="200px">
+				<div class="biaozhu" witdh="200px" style="text-align: center">本田圭佑</div>
+				<img src="images/qytm.jpg" width="200px" style="margin-top: 20px">
+				<div class="biaozhu" witdh="200px" style="text-align: center">浅野拓磨</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="chapter">
+		<div class="fancy-header">
+			<span>Chapter 2</span>
+		</div>
+		<div class="fancy-header2">
+			<h2>德国青训</h2>
+		</div>
+	</div>
+
+	<div class="section" style="margin-bottom: 30px">
+		<p>2000年欧洲杯小组赛出局后，德国人意识到了足球人才青黄不接的危机。于是，为了培养接班德国足球的青年人才，德国人对原有的青训系统进行了完善。</p>
+		<img src="images/germanlose.jpg" width="900px">
+		<p>德国采用“俱乐部青训+足协青训”的模式，制定了《德国足协青少年发展计划》，并投入1亿欧元在全国设立了366个德国足协精英中心。精英中心的任务就是发现和挖掘当地有潜力的年轻球员，并让他们每周一天进行科学的足球训练。在精英中心接受训练的1.4万名年龄在11岁到14岁之间的小球员之中有天赋的选手，会被精英中心送至国内各职业俱乐部的梯队进行青训。依靠这一系统，根据2017年德国足协最新公布的数字，德国最新的男、女注册球员总数为704.3万人，相当于德国每11个人当中就有一位注册球员，其中青少年球员超过了180万。除了精英中心之外，
+			46所青少年足球运动中心，29所足球精英学校和108514支青年球队都为热爱足球的德国青少年提供了踢球的场所。
+		</p>
+		<img src="images/jzthe.jpg" width="900px" data-aos="zoom-in">
+		<div class="biaozhu" witdh="900px" style="text-align: center">德国足协-青少年发展计划</div>
+		<div class="clearfix" style="width: 900px">
+			<div class="wgleft">
+				德国的职业俱乐部也各自建立了不同年龄层次的梯队，以2016-2017赛季异军突起的RB莱比锡队为例，队内构建了从U8到U23之间的12支年龄层梯队。梯队的教练通常选择退役不久、希望走上教练道路的老将，他们丰富的经验会帮助球员成长。U23队目前在德甲第四级别联赛，还有诸多梯队分布在德国北部至莱比锡市的各级联赛中。除莱比锡队以外，其他球队的青年梯队也参与到半职业联赛和业余联赛中练级。2017年中国U20队曾希望参加德国第四级别联赛，就是看准了和同一年龄层次球员的竞技机会，只可惜最终未能成行。
+			</div>
+			<div class="wgright">
+				<img src="images/RB.png" width="200px">
+			</div>
+		</div>
+			<p>如此繁荣的青训体系，让德甲联赛以25.99岁的平均年龄，成为英西法德意五大联赛中平均年龄最小的联赛。</p>
+	</div>
+
+
+
+
+
+	<div id="footer">
+		<p>特别鸣谢丨
+			<a href="http://www.fcguoan.com/" target="blank">北京中赫国安足球俱乐部</a>
+			<a href="http://syxx.nlsyz.com.cn/" target="blank">北京市牛栏山一中实验学校</a>
+			<br> 中国传媒大学新闻传播学部电视学院 顾洁老师
+			<br> 中国传媒大学计算机与网络中心 王海波老师 张伟娜老师
+			<br>采访拍摄撰稿丨王奇悦 张天放 任雨萌&nbsp;&nbsp;&nbsp;网页设计丨宁雪琪 任雨萌&nbsp;&nbsp;&nbsp; H5制作丨申珊
+			<br>© 2018 中国传媒大学新闻传播学部电视学院</p>
+	</div>
+
+
+
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/skippr.js"></script>
+	
+	
+	<script type="text/javascript" src="js/smoothnav.js"></script>
+	<script type="text/javascript" src="js/video.min.js"></script>
+
+
+
+	<script>
+
+
+		$(document).ready(function () {
+			$(".slider").skippr({
+				navType: 'bubble',
+			});
+
+		});
+
+		mWinHeight = $(window).height();  		//b
+		$(window).on("scroll", function () {
+			$(".video-scrollplay").each(function () {
+				var mScrollTop = $(window).scrollTop();		//a
+				var mElementOffset = $(this).offset().top;  //c
+				var mElementHeight = $(this).outerHeight(); //d
+				var v = videojs(this);
+				var paused = $(this).attr("data-pausedbyvisitor");
+
+				if ((mScrollTop + mWinHeight - mElementOffset > mElementHeight) && paused != "1") {
+					v.play();
+				}
+
+				if (mScrollTop > mElementOffset + mElementHeight) {
+					v.pause();
+
+				}
+			});
+			$("#daoyu").each(function () {
+				var mScrollTop2 = $(window).scrollTop();		//a
+				var mElementOffset2 = $(this).offset().top;  //c
+
+				if ((mScrollTop2 + mWinHeight - mElementOffset2 > 100)) {
+					$(".header").css('display', 'block');
+				}
+				else {
+					$(".header").css('display', 'none');
+				}
+			});
+
+
+			$(".caption").each(function () {
+				var mScrollTop3 = $(window).scrollTop();		//a
+				var mElementOffset3 = $(this).offset().top;  //c
+				var mElementHeight3 = $(this).height();
+				var show = $(this).attr("show");
+				var left = $(this).children("#line-left");
+				var right = $(this).children("#line-right");
+
+				var alpha = 1;  // 距离底边的系数
+				var beta = 0.4;  // 距离上边的系数
+				if ((mScrollTop3 + mWinHeight > mElementOffset3 + mElementHeight3 + mElementHeight3 * alpha) && (mScrollTop3 < mElementOffset3 + mElementHeight3 * beta)) {
+					if (show != "1") {
+						$(this).attr("show", "1");
+
+						$(this).children("#line-left").removeClass("line-left-out");
+						$(this).children("#line-right").removeClass("line-right-out");
+						$(this).children("#line-left").addClass("line-left");
+						$(this).children("#line-right").addClass("line-right");
+						$(this).addClass("caption-ani");
+					}
+				} else {
+					if (show == "1") {
+						$(this).attr("show", "0");
+						$(this).removeClass("caption-ani");
+						$(this).children("#line-left").removeClass("line-left");
+						$(this).children("#line-right").removeClass("line-right");
+						$(this).children("#line-left").addClass("line-left-out");
+						$(this).children("#line-right").addClass("line-right-out");
+					}
+				}
+			});
+		})
+
+
+
+
+		$(".video-scrollplay").on("pause", function () {
+			$(this).parent().attr("data-pausedbyvisitor", "1");
+		})
+
+
+
+
+	</script>
+	<script src="js/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 0,
+			duration: 2000,
+			delay: 300,
+		});
+	</script>
+</body>
+<script type="text/javascript">
+    
+	// 全国省份列表
+	var dataMap = [
+		{
+			name: '北京',
+			value: '0',
+			tooltip: '<p style="font-size:18px">北京</p><p style="font-size:14px">100名队员来自北京47中、北京朝阳体校和回民中学。</p>'
+		},
+		{
+			name: '重庆',
+			tooltip: '<p style="font-size:18px">重庆</p><p style="font-size:14px">一名球员来自重庆。</p>'
+		},
+		{
+			name: '湖北',
+			tooltip: '<p style="font-size:18px">湖北</p><p style="font-size:14px">一名球员来自湖北。</p>'
+		},
+		{
+			name: '广东',
+			tooltip: '<p style="font-size:18px">广东</p><p style="font-size:14px">五名队员来自广州恒大足球学校。</p>'
+		},
+		{
+			name: '辽宁',
+			tooltip: '<p style="font-size:18px">辽宁</p><p style="font-size:14px">一名球员来自沈阳。</p>'
+		},
+		{ name: '天津' }, { name: '上海' },
+		{ name: '河北' }, { name: '河南' }, { name: '云南' },
+		{ name: '黑龙江' }, { name: '湖南' }, { name: '安徽' }, { name: '山东' }, { name: '新疆' }, { name: '江苏' }, { name: '浙江' }, { name: '江西' },
+		{ name: '广西' }, { name: '甘肃' }, { name: '山西' }, { name: '内蒙古' }, { name: '陕西' }, { name: '吉林' }, { name: '福建' }, { name: '贵州' },
+		{ name: '青海' }, { name: '西藏' }, { name: '四川' }, { name: '宁夏' }, { name: '海南' }, { name: '台湾' }, { name: '香港' }, { name: '澳门' }]
+	// 需要在页面上直接标记出来的城市
+	var specialMap = ['北京', '辽宁', '重庆', '广东', '湖北'];
+	// 对dataMap进行处理，使其可以直接在页面上展示
+	for (var i = 0; i < specialMap.length; i++) {
+		for (var j = 0; j < dataMap.length; j++) {
+			if (specialMap[i] == dataMap[j].name) {
+				dataMap[j].selected = true;
+				break;
+			}
+
+		}
+	}
+	// 绘制图表，准备数据
+	var option = {
+		tooltip: {
+			backgroundColor: "#1D6A54",//提示标签背景颜色
+			textStyle: { color: "#fff" } //提示标签字体颜色
+		},
+		series: [
+			{
+				name: '中国',
+				type: 'map',
+				mapType: 'china',
+				selectedMode: 'multiple',
+				label: {
+					normal: {
+						show: true,//显示省份标签
+						// textStyle:{color:"#c71585"}//省份标签字体颜色
+					},
+					emphasis: {
+						show: true,//对应的鼠标悬浮效果
+						textStyle:{color:"#000"}
+					}
+				},
+				itemStyle: {
+					normal: {
+						borderWidth: .5,//区域边框宽度
+						// borderColor: '#009fe8',//区域边框颜色
+						// areaColor:"#ffefd5",//区域颜色
+					},
+					emphasis: {
+						borderWidth: .5,
+						borderColor: '#2E8B57',
+						areaColor: "rgb(145,180,147)",
+					}
+				},
+				data: dataMap
+			}
+		]
+	};
+	//初始化echarts实例
+	var myChart = echarts.init(document.getElementById('container'));
+	//使用制定的配置项和数据显示图表
+	myChart.setOption(option);
+
+	myChart.on("mouseover", function (params){   
+		myChart.setOption(option);
+           // if(params.data.selected != true){  
+/* 			if (params.name == '吉林') {
+			
+                myChart.dispatchAction({  
+				type: 'hidetip',
+
+                });  
+            }  else {
+				
+                myChart.dispatchAction({  
+				type: 'hightlight',
+
+                });  
+
+			} */
+        });  
+</script>
+
+
+</html>
